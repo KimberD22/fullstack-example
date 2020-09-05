@@ -7,5 +7,9 @@ import { HttpClient } from '@angular/common/http'
 export class UsersService {
   private userUrl = 'http://localhost:8080/user';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getUsers() {
+    return this.http.get(this.userUrl);
+  }
 }
