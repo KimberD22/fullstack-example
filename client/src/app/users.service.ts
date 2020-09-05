@@ -12,4 +12,5 @@ export class UsersService {
   getUsers() {
     return this.http.get(this.userUrl);
   }
+
 }
